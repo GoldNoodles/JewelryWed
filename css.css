@@ -1,0 +1,89 @@
+/* Custom CSS */
+/* Hero Section - Wedding Style */
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1519665414779-0ddb69c33ae3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+/* Wedding-specific styles */
+.wedding-title {
+    font-family: 'Playfair Display', serif;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    letter-spacing: 1px;
+}
+.wedding-text {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+}
+.wedding-button {
+    background: linear-gradient(to right, #f8bbd0, #f48fb1);
+    box-shadow: 0 4px 15px rgba(244, 143, 177, 0.4);
+    transition: all 0.3s ease;
+}
+.wedding-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(244, 143, 177, 0.6);
+}
+.wedding-highlight {
+    position: relative;
+}
+.wedding-highlight:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(to right, #f8bbd0, #f48fb1);
+}
+/* Wedding animation effects */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+.wedding-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(244, 143, 177, 0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.filter-button.active {
+    background: linear-gradient(135deg, #f8bbd0, #f48fb1);
+    color: #fff;
+    font-weight: 600;
+}
+
+#cartDropdown {
+    display: none;
+    border: 1px solid #f8bbd0;
+    box-shadow: 0 5px 15px rgba(244, 143, 177, 0.2);
+}
+
+.cart:hover #cartDropdown {
+    display: block;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.testimonial-card {
+    transition: all 0.4s ease;
+    background: linear-gradient(to bottom right, white, #fff5f7);
+    border-left: 4px solid #f48fb1;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 10px 25px rgba(244, 143, 177, 0.15);
+}
+/* Wedding fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap');
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
